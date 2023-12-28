@@ -73,7 +73,10 @@
     <Content Include="Images\img2.jpg" />
     <Content Include="Images\img3.jpg" />
     <Content Include="Images\img4.jpg" />
+    <Content Include="Images\user.svg" />
     <Content Include="Images\white_logo.svg" />
+    <Content Include="MovieElement.ascx" />
+    <Content Include="MovieSection.ascx" />
     <Content Include="Navbar.ascx" />
     <Content Include="style.css" />
     <Content Include="Web.config" />
@@ -85,6 +88,20 @@
     </Compile>
     <Compile Include="HomePage.aspx.designer.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MovieElement.ascx.cs">
+      <DependentUpon>MovieElement.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MovieElement.ascx.designer.cs">
+      <DependentUpon>MovieElement.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MovieSection.ascx.cs">
+      <DependentUpon>MovieSection.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MovieSection.ascx.designer.cs">
+      <DependentUpon>MovieSection.ascx</DependentUpon>
     </Compile>
     <Compile Include="Navbar.ascx.cs">
       <DependentUpon>Navbar.ascx</DependentUpon>

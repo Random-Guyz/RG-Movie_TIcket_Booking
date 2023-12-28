@@ -1,7 +1,7 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 * {
-    margin: 0;
+    margin: 0 0 0 0px;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
@@ -19,7 +19,15 @@
 
 body {
     overflow-x: hidden;
-    background-color: var(--bodyclr);
+}
+
+.custom-navbar {
+    z-index: 12;
+    width: 100%;
+    position: fixed;
+    top: 0%;
+    background-color: rgba(0,0,0,0.4);
+    backdrop-filter: blur(15px);
 }
 
 .logo img {
@@ -29,55 +37,75 @@ body {
     cursor: pointer;
 }
 
-nav {
+.slide {
+    background: url("Images/img1.jpg");
+    height: 80vh;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    position: fixed;
-    top: 0;
-    z-index: 9;
-    box-shadow: 0px 2px 6px 1px var(--shadow-clr);
-    backdrop-filter: blur(15px);
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: .3s ease;
 }
 
-ul {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+.Movie-Poster-Section {
+    height: 80vh;
 }
 
-li {
-    margin: 10px 30px 10px 0px;
-    list-style-type: none;
-}
-
-    li a {
-        color: white;
-        text-decoration: none;
+    .Movie-Poster-Section:hover .slide {
+        filter: brightness(0.6) blur(4px);
     }
 
-#search-box {
-    outline: none;
-    border: 2px solid var(--border);
-    padding: 5px;
-    border-radius: 16px;
-    margin-right: -10px;
+.Movie-Details {
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    top: 35%;
+    margin-left: 85px;
+    line-height: 2;
+    color: white;
+    z-index: 4;
 }
 
-li img {
-    width: 25px;
-    height: 25px;
-}
+    .Movie-Details h1 {
+        font-size: 45px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .Movie-Details #desc {
+        margin-top: 15px;
+        font-weight: 600;
+        text-align: justify;
+        width: 50%;
+    }
+
+
+/*Section*/
 
 section {
     width: 100%;
     height: 100vh;
 }
 
-.slide{
-   background: url("Images/img1.jpg");
-   height: 80vh;
-   width: 100%;
-   position: absolute;
-   background-size: cover;
-   background-repeat: no-repeat;
+#bookNowBtn {
+    position: absolute;
+    top: 68%;
+    left: 5%;
+    padding: 0px 22px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    backdrop-filter: blur(20px);
+    height: 50px;
+    border: 1px solid #969292;
+    border-radius: 25px;
+    transition: .3s ease;
+    z-index: 10;
 }
+
+    #bookNowBtn:hover {
+        transform: scale(1.1);
+    }
