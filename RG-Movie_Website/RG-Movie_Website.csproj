@@ -67,21 +67,38 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Footer.ascx" />
     <Content Include="HomePage.aspx" />
     <Content Include="Images\favicon-logo.png" />
     <Content Include="Images\img1.jpg" />
     <Content Include="Images\img2.jpg" />
     <Content Include="Images\img3.jpg" />
     <Content Include="Images\img4.jpg" />
+    <Content Include="Images\Posters\12_fail_poster.jpg" />
+    <Content Include="Images\Posters\animal_poster.jpeg" />
+    <Content Include="Images\Posters\aquaman_poster.jpg" />
+    <Content Include="Images\Posters\dunki_poster.jpg" />
+    <Content Include="Images\Posters\migration_poster.jpeg" />
+    <Content Include="Images\Posters\salaar_poster.jpg" />
+    <Content Include="Images\Posters\sam_bahadur_poster.jpg" />
+    <Content Include="Images\Posters\wonka_poster.jpg" />
     <Content Include="Images\user.svg" />
     <Content Include="Images\white_logo.svg" />
     <Content Include="MovieElement.ascx" />
     <Content Include="MovieSection.ascx" />
     <Content Include="Navbar.ascx" />
+    <Content Include="script.js" />
     <Content Include="style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Footer.ascx.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Footer.ascx.designer.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+    </Compile>
     <Compile Include="HomePage.aspx.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
