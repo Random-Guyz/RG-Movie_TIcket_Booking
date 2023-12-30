@@ -1,5 +1,5 @@
 # RG - Movie Ticket Booking 
--Website to book your most popular movie tickets in no time!
+- Website to book your most popular movie tickets in no time!
 
 ## Home Page
 ![Screenshot (15)](https://github.com/Random-Guyz/RG-Movie_TIcket_Booking/assets/106680482/780c189b-7e9f-4825-97de-ff6e72e9426b)
