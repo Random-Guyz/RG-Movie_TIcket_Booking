@@ -7,30 +7,6 @@
     font-family: 'Roboto', sans-serif;
 }
 
-:root {
-    --nav-color: beige;
-    --shadow-clr: #0c1012c7;
-    --border: rgba(0, 0, 0, 0.4);
-    --bodyclr: #0C1012;
-    --color: beige;
-    --red: #ff0000;
-    --transparent-black: rgba(0, 0, 0, 0.4);
-}
-
-body {
-    overflow-x: hidden;
-    background-color: black;
-}
-
-.custom-navbar {
-    z-index: 12;
-    width: 100%;
-    position: fixed;
-    top: 0%;
-    background-color: rgba(0,0,0,0.4);
-    backdrop-filter: blur(15px);
-}
-
 .logo img {
     width: 70px;
     margin: 0px 0px 0px 40px;
@@ -83,11 +59,6 @@ body {
 #MovCardImg {
     object-fit: cover;
 }
-/*Section*/
-section {
-    width: 100%;
-    height: 100vh;
-}
 
 #bookNowBtn {
     position: absolute;
@@ -111,3 +82,211 @@ section {
     #bookNowBtn:hover {
         transform: scale(1.1);
     }
+
+/*Login Page Styling*/
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --bg_body: #212121;
+    --bg_gradient_last_color: rgba(0, 212, 255, 1);
+    --bg_gradient: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(52, 9, 121, 1) 37%, var(--bg_gradient_last_color) 94%);
+}
+
+.formBody {
+    margin: 0; /* Remove default margin */
+    overflow: hidden; /* Hide scrollbar caused by the slider */
+    position: relative;
+    height: 100vh;
+}
+
+.slider-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden; /* Hide overflow */
+}
+
+.slider {
+    display: flex;
+    width: 400%; /* Adjust based on the number of images */
+    height: 100%;
+    animation: slide 30s linear infinite;
+}
+
+    .slider img {
+        width: 25%; /* Adjust based on the number of images */
+        height: 100%;
+        object-fit: cover;
+    }
+
+@keyframes slide {
+    0%,100% {
+        transform: translateX(0%);
+    }
+
+    30% {
+        transform: translateX(-5%);
+    }
+
+    60% {
+        transform: translateX(-10%);
+    }
+
+    100% {
+        transform: translateX(-15%);
+    }
+}
+
+h1 {
+    font-size: 23px;
+}
+
+.loginForm {
+    width: 600px;
+    padding: 64px 40px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 8px;
+}
+
+    .loginForm .control {
+        margin: 0 0 24px;
+        color: aliceblue;
+    }
+
+
+    .loginForm input {
+        width: 100%;
+        padding: 14px 16px;
+        border: 0;
+        background: transparent;
+        color: #fff;
+        font-family: monospace, serif;
+        letter-spacing: 0.05em;
+        font-size: 16px;
+        outline: none;
+    }
+
+    .loginForm .btn {
+        width: 100%;
+        display: block;
+        padding: 14px 16px;
+        background: transparent;
+        outline: none;
+        border: 0;
+        color: #fff;
+        letter-spacing: 0.1em;
+        font-weight: bold;
+        font-family: monospace;
+        font-size: 16px;
+    }
+
+.block-cube {
+    position: relative;
+}
+
+    .block-cube .bg-top {
+        position: absolute;
+        height: 10px;
+        background: rgb(2, 0, 36);
+        background: var(--bg_gradient);
+        bottom: 100%;
+        left: 5px;
+        right: -5px;
+        transform: skew(-45deg, 0);
+        margin: 0;
+    }
+
+        .block-cube .bg-top .bg-inner {
+            bottom: 0;
+        }
+
+    .block-cube .bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgb(2, 0, 36);
+        background: var(--bg_gradient);
+    }
+
+    .block-cube .bg-right {
+        position: absolute;
+        background: rgb(2, 0, 36);
+        background: rgba(0, 212, 255, 1);
+        top: -5px;
+        z-index: 0;
+        bottom: 5px;
+        width: 10px;
+        left: 100%;
+        transform: skew(0, -45deg);
+    }
+
+        .block-cube .bg-right .bg-inner {
+            left: 0;
+        }
+
+    .block-cube .bg .bg-inner {
+        transition: all 0.2s ease-in-out;
+        background: var(--bg_body);
+        position: absolute;
+        left: 2px;
+        top: 2px;
+        right: 2px;
+        bottom: 2px;
+    }
+
+    .block-cube .text {
+        position: relative;
+        z-index: 2;
+    }
+
+    .block-cube.block-input input {
+        position: relative;
+        z-index: 2;
+    }
+
+        .block-cube.block-input input:focus ~ .bg-right .bg-inner,
+        .block-cube.block-input input:focus ~ .bg-top .bg-inner,
+        .block-cube.block-input input:focus ~ .bg-inner .bg-inner {
+            top: 100%;
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+    .block-cube.block-input .bg-top,
+    .block-cube.block-input .bg-right,
+    .block-cube.block-input .bg {
+        background: rgba(255, 255, 255, 0.5);
+        transition: background 0.2s ease-in-out;
+    }
+
+        .block-cube.block-input .bg-right .bg-inner,
+        .block-cube.block-input .bg-top .bg-inner {
+            transition: all 0.2s ease-in-out;
+        }
+
+    .block-cube.block-input:focus,
+    .block-cube.block-input:hover {
+        .block-cube.block-input .bg-top, .block-cube.block-input .bg-right, .block-cube.block-input .bg
+
+{
+    background: rgba(255, 255, 255, 0.8);
+}
+
+}
+
+.block-cube.block-cube-hover:focus,
+.block-cube.block-cube-hover:hover .bg .bg-inner {
+    top: 100%;
+}

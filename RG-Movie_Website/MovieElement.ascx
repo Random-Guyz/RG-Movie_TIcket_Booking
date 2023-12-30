@@ -3,7 +3,7 @@
 <div class="col mb-5">
     <div class="card bg-dark text-white h-100">
         <!-- Product image-->
-        <img class="card-img-top" id="MovCardImg" src="<%= MovieImg %>" height="300" width="450" alt="..." />
+        <img class="card-img-top" id="MovCardImg" src="<%= MovieImg %>" height="300" width="450" alt="<%= MovieTitle %>" />
         <!--  <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." /> -->
         <!-- Product details-->
         <div class="card-body p-4">

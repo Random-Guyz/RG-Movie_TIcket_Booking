@@ -1,55 +1,31 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Navbar.ascx.cs" Inherits="RG_Movie_Website.Navbar" %>
 
-<!--Main Navigation-->
+<nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="#!">
+            <img src="Images/white_logo.svg" height="30" /></a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                <li class="nav-item me-5"><a class="nav-link text-light" aria-current="page" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-light" href="#MovSection">Movies</a></li>
 
-    <!-- Jumbotron -->
-    <nav class="p-3 text-center custom-navbar">
-        <div class="container">
-            <div class="row">
-                <!-- Left elements -->
-                <div class="col-md-4 d-flex justify-content-center justify-content-md-start mb-3 mb-md-0">
-                    <a href="#!" class="ms-md-2">
-                        <img src="./Images/white_logo.svg" height="35" alt="Logo" title="RG Movie Ticket Booking" />
-                    </a>
-                </div>
-                <!-- Left elements -->
+                <!-- <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+                         data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                         <li><a class="dropdown-item" href="#!">All Products</a></li>
+                         <li>
+                             <hr class="dropdown-divider" />
+                         </li>
+                         <li><a class="dropdown-item" href="#!">Popular Items</a></li>
+                         <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
+                     </ul>
+                 </li> -->
 
-                <!-- Center elements -->
-                <div class="col-md-4">
-                    <form class="d-flex input-group w-auto my-auto mb-3 mb-md-0">
-                        <input autocomplete="off" type="search" class="form-control rounded-pill" placeholder="Search" title="Press Enter to Proceed" />
-                    </form>
-                </div>
-                <!-- Center elements -->
-
-                <!-- Right elements -->
-                <div class="col-md-4 d-flex justify-content-center justify-content-md-end align-items-center">
-                    <div class="d-flex">
-                        <a href="#MovSec" class="text-white btn text-decoration-none me-5">Movies</a>
-
-                        <!-- User -->
-                        <% 
-                            string user = "";
-
-                            if (user != "")
-                            {
-                        %>
-                        <div>
-                            <a class="text-reset dropdown-toggle d-flex align-items-center" href="#"
-                                id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                                <img src="https://mdbootstrap.com/img/Photos/Avatars/img (31).jpg" class="rounded-circle" height="30" title="Profile"
-                                    alt="User Profile" loading="lazy" />
-                            </a>
-                        </div>
-                        <% }
-                            else
-                            { %>
-                        <a href="#" class="text-white btn btn-primary text-decoration-none ms-3 px-3">Login</a>
-                        <%} %>
-                    </div>
-                </div>
-                <!-- Right elements -->
-            </div>
+            </ul>
+            <form runat="server" class="d-flex">
+                <asp:Button ID="Button1" runat="server" Text="Login" CssClass="btn btn-outline-secondary" OnClick="LoginBtn_Click" />
+            </form>
         </div>
-    </nav>
-<!--Main Navigation-->
+    </div>
+</nav>
