@@ -1,4 +1,4 @@
-#RG - Movie Ticket Booking 
+# RG - Movie Ticket Booking 
 -Website to book your most popular movie tickets in no time!
 
 ## Home Page
