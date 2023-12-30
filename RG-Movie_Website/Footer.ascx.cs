@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 namespace RG_Movie_Website
 {
     public partial class Footer : System.Web.UI.UserControl
-    {
+    { 
         protected void Page_Load(object sender, EventArgs e)
         {
 

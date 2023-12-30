@@ -122,10 +122,6 @@
     <Content Include="Global.asax" />
     <Content Include="HomePage.aspx" />
     <Content Include="Images\favicon-logo.png" />
-    <Content Include="Images\footerImgs\CustSrvc.png" />
-    <Content Include="Images\footerImgs\NewMovies.png" />
-    <Content Include="Images\footerImgs\ticket.png" />
-    <Content Include="Images\footerImgs\Upcomming.png" />
     <Content Include="Images\img1.jpg" />
     <Content Include="Images\img2.jpg" />
     <Content Include="Images\img3.jpg" />
