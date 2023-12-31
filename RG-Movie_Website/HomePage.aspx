@@ -4,8 +4,6 @@
 
 <%@ Register Src="~/Navbar.ascx" TagName="Navbar" TagPrefix="uc" %>
 
-<%--<%@ Register Src="~/Footer.ascx" TagName="Footer" TagPrefix="uc" %>--%>
-
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -45,9 +43,6 @@
     <%--Force next columns to break to new line <div class="w-100"></div>--%>
 
     <section class="bg-dark">
-        <%--  <uc:Footer runat="server"/>--%>
-
-
         <footer class="container py-5 bg-dark">
             <div class="row">
 

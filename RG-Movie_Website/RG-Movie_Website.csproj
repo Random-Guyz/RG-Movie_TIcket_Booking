@@ -118,7 +118,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Footer.ascx" />
     <Content Include="Global.asax" />
     <Content Include="HomePage.aspx" />
     <Content Include="Images\favicon-logo.png" />
@@ -150,13 +149,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Footer.ascx.cs">
-      <DependentUpon>Footer.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Footer.ascx.designer.cs">
-      <DependentUpon>Footer.ascx</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
