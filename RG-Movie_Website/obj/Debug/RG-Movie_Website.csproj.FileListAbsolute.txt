@@ -1,5 +1,3 @@
-C:\Users\DELL\Desktop\RG-Movie_Website\RG-Movie_Website\obj\Debug\RG-Movie_Website.csproj.AssemblyReference.cache
-C:\Users\DELL\Desktop\RG-Movie_Website\RG-Movie_Website\obj\Debug\RG-Movie_Website.csproj.CoreCompileInputs.cache
 C:\Users\DELL\Desktop\RG-Movie_Website\RG-Movie_Website\bin\RG-Movie_Website.dll.config
 C:\Users\DELL\Desktop\RG-Movie_Website\RG-Movie_Website\bin\RG-Movie_Website.dll
 C:\Users\DELL\Desktop\RG-Movie_Website\RG-Movie_Website\bin\RG-Movie_Website.pdb
@@ -85,6 +83,8 @@ C:\Users\DELL\Desktop\RG-Movie_Website\RG-Movie_Website\bin\System.Numerics.Vect
 C:\Users\DELL\Desktop\RG-Movie_Website\RG-Movie_Website\bin\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\DELL\Desktop\RG-Movie_Website\RG-Movie_Website\bin\System.Threading.Tasks.Extensions.xml
 C:\Users\DELL\Desktop\RG-Movie_Website\RG-Movie_Website\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\DELL\Desktop\RG-Movie_Website\RG-Movie_Website\obj\Debug\RG-Movie_Website.csproj.AssemblyReference.cache
+C:\Users\DELL\Desktop\RG-Movie_Website\RG-Movie_Website\obj\Debug\RG-Movie_Website.csproj.CoreCompileInputs.cache
 C:\Users\DELL\Desktop\RG-Movie_Website\RG-Movie_Website\obj\Debug\RG-Movie_Website.csproj.CopyComplete
 C:\Users\DELL\Desktop\RG-Movie_Website\RG-Movie_Website\obj\Debug\RG-Movie_Website.dll
 C:\Users\DELL\Desktop\RG-Movie_Website\RG-Movie_Website\obj\Debug\RG-Movie_Website.pdb

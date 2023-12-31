@@ -65,15 +65,14 @@
             <form>
                 <div class="form-group mb-2">
                     <label class="text-white" for="exampleFormControlInput1">Your Email</label>
-                    <input type="email" class="form-control" name="userEmail" id="exampleFormControlInput1"
-                        placeholder="email@example.com">
+                    <input type="email" class="form-control" name="userEmail" placeholder="email@example.com">
                 </div>
                 <div class="form-group mt-2">
                     <label class="text-white" for="exampleFormControlTextarea1">Write your queries</label>
-                    <textarea class="form-control" name="userMsg" id="exampleFormControlTextarea1" rows="3"
+                    <textarea class="form-control" name="userMsg"  rows="3"
                         placeholder="Write your valuable opinions here...."></textarea>
                 </div>
-                <button class="btn btn-primary mt-2" type="submit">Submit</button>
+                <button class="btn btn-primary mt-2" id="submitBtn" type="submit">Submit</button>
             </form>
         </div>
     </div>

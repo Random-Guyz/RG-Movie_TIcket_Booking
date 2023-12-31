@@ -293,3 +293,27 @@ h1 {
 
 /*footer Styling*/
 
+.foot-li {
+    position: relative;
+    transition: margin-left 0.3s ease;
+}
+
+    .foot-li::before {
+        content: '';
+        height: 100%;
+        width: 3px;
+        position: absolute;
+        top: 0;
+        left: -10px;
+        background-color: #0b5ed7;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .foot-li:hover::before {
+        opacity: 1;
+    }
+
+    .foot-li:hover {
+        margin-left: 15px;
+    }
