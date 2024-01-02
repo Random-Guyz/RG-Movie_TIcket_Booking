@@ -88,7 +88,7 @@
                 </div>
 
                 <div class="col-md-5 offset-md-1 mb-3">
-                    <form method="post">
+                    <form method="post" autocomplete="off">
                         <div class="form-group mb-2">
                             <label class="text-white" for="exampleFormControlInput1">Your Email</label>
                             <input type="email" class="form-control" name="userEmail" placeholder="email@example.com" />

@@ -9,21 +9,18 @@ namespace RG_Movie_Website
 {
     public partial class Navbar : System.Web.UI.UserControl
     {
-        //public string User { get; set; }
-
-        //public Navbar(string name)
-        //{
-        //    User = name;
-        //}
-        protected void LoginBtn_Click(object sender, EventArgs e)
-        {
-            // Assuming you have a named route named "LoginRoute"
-            Response.Redirect("~/LoginPage.aspx");
-        }
-
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+        protected void LoginBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/LoginPage.aspx");
+        }
+
+        protected void SignInBtn_Click(Object sender, EventArgs e)
+        {
+            Response.Redirect("~/sign_up.aspx");
         }
     }
 }

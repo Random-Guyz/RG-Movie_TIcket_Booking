@@ -13,9 +13,12 @@ namespace RG_Movie_Website
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
             string email = Request.Form["userEmail"];
             string msg = Request.Form["userMsg"];
             SendMessage(email, msg);
+            }
         }
         private void SendMessage(string email, string msg)
         {
@@ -24,8 +27,10 @@ namespace RG_Movie_Website
                 MailMessage mail = new MailMessage();
                 mail.From = new MailAddress("team.randomguyz@gmail.com");
                 mail.To.Add(email);
-                mail.Subject = "Kaif Sent This!";
-                mail.Body = msg;
+                mail.Subject = "Your Query Have Been Submited";
+                mail.IsBodyHtml = true;
+                mail.Body = $"" +
+                    $"<p style='font-weight: bold;'>Your Message have been submitted : </p> {msg}<br/><br/> Regards <br/> - Team RG";
 
                 SmtpClient smtp = new SmtpClient();
                 smtp.Host = "smtp.gmail.com";

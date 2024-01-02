@@ -118,9 +118,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="forget_password.aspx" />
     <Content Include="Global.asax" />
     <Content Include="HomePage.aspx" />
+    <Content Include="Images\F.jpg" />
     <Content Include="Images\favicon-logo.png" />
+    <Content Include="FF.jpg" />
+    <Content Include="Images\FFF.jpg" />
+    <Content Include="Images\froget.jpg" />
     <Content Include="Images\img1.jpg" />
     <Content Include="Images\img2.jpg" />
     <Content Include="Images\img3.jpg" />
@@ -145,10 +150,24 @@
     <Content Include="MovieSection.ascx" />
     <Content Include="Navbar.ascx" />
     <Content Include="script.js" />
+    <Content Include="sign_up.aspx" />
     <Content Include="style.css" />
+    <Content Include="styles\forget_password.css" />
+    <Content Include="styles\login.css" />
+    <Content Include="styles\sign_up.css" />
+    <Content Include="styles\TermsStyle.css" />
+    <Content Include="TermsModal.aspx" />
+    <Content Include="TermsScript.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="forget_password.aspx.cs">
+      <DependentUpon>forget_password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forget_password.aspx.designer.cs">
+      <DependentUpon>forget_password.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -188,6 +207,20 @@
       <DependentUpon>Navbar.ascx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sign_up.aspx.cs">
+      <DependentUpon>sign_up.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sign_up.aspx.designer.cs">
+      <DependentUpon>sign_up.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TermsModal.aspx.cs">
+      <DependentUpon>TermsModal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TermsModal.aspx.designer.cs">
+      <DependentUpon>TermsModal.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
