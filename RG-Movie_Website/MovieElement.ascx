@@ -17,7 +17,7 @@
         <!-- Product actions-->
         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
             <div class="text-center">
-                <a class="text-light btn btn-outline-secondary mt-auto" href="#">Book Ticket</a>
+                <a id="btn" runat="server" class="text-light btn btn-outline-warning mt-auto">Book Ticket</a>
             </div>
         </div>
     </div>

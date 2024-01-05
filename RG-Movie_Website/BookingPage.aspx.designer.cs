@@ -11,16 +11,7 @@ namespace RG_Movie_Website
 {
 
 
-    public partial class MovieElement1
+    public partial class BookingPage
     {
-
-        /// <summary>
-        /// btn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor btn;
     }
 }

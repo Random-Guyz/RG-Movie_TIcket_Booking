@@ -118,6 +118,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BookingPage.aspx" />
+    <Content Include="BookingScript.js" />
     <Content Include="forget_password.aspx" />
     <Content Include="Global.asax" />
     <Content Include="HomePage.aspx" />
@@ -152,6 +154,7 @@
     <Content Include="script.js" />
     <Content Include="sign_up.aspx" />
     <Content Include="style.css" />
+    <Content Include="styles\BookingPage.css" />
     <Content Include="styles\forget_password.css" />
     <Content Include="styles\login.css" />
     <Content Include="styles\sign_up.css" />
@@ -161,6 +164,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BookingPage.aspx.cs">
+      <DependentUpon>BookingPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BookingPage.aspx.designer.cs">
+      <DependentUpon>BookingPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="forget_password.aspx.cs">
       <DependentUpon>forget_password.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

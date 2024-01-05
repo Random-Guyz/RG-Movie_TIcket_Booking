@@ -305,7 +305,7 @@ h1 {
         position: absolute;
         top: 0;
         left: -10px;
-        background-color: #0b5ed7;
+        background-color: #FEE505;
         opacity: 0;
         transition: opacity 0.3s ease;
     }
