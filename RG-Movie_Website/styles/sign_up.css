@@ -1,8 +1,5 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
-
-*, ::after, ::before {
+﻿*, ::after, ::before {
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
 }
 
 :root {
@@ -64,8 +61,7 @@ h1 {
 }
 
 .loginForm {
-    width: 550px;
-    height: 600px;
+    width: 600px;
     padding: 64px 40px;
     margin: 0 auto;
     position: absolute;
@@ -74,50 +70,39 @@ h1 {
     transform: translate(-50%,-50%);
     background-color: rgba(0,0,0,0.8);
     border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
-.innerForm {
-    width: 100%;
-    margin-left: 95px;
-    padding-bottom: 30px;
-}
+    .loginForm .control {
+        margin: 0 0 24px;
+        color: aliceblue;
+    }
 
-.loginForm .control {
-    margin: 0 0 24px;
-    color: aliceblue;
-    width: 65%;
-    height: 40px;
-}
 
-.loginForm input {
-    width: 120%;
-    padding: 9px 16px;
-    border: 0;
-    background: transparent;
-    color: #fff;
-    font-family: monospace, serif;
-    letter-spacing: 0.05em;
-    font-size: 16px;
-    outline: none;
-}
+    .loginForm input {
+        width: 100%;
+        padding: 14px 16px;
+        border: 0;
+        background: transparent;
+        color: #fff;
+        font-family: monospace, serif;
+        letter-spacing: 0.05em;
+        font-size: 16px;
+        outline: none;
+    }
 
-.loginForm .btn {
-    width: 65%;
-    display: block;
-    padding: 14px 16px;
-    background: transparent;
-    outline: none;
-    border: 0;
-    color: #fff;
-    letter-spacing: 0.1em;
-    font-weight: bold;
-    font-family: monospace;
-    font-size: 16px;
-}
+    .loginForm .btn {
+        width: 100%;
+        display: block;
+        padding: 14px 16px;
+        background: transparent;
+        outline: none;
+        border: 0;
+        color: #fff;
+        letter-spacing: 0.1em;
+        font-weight: bold;
+        font-family: monospace;
+        font-size: 16px;
+    }
 
 .block-cube {
     position: relative;
@@ -125,7 +110,6 @@ h1 {
 
     .block-cube .bg-top {
         position: absolute;
-        width: 120%;
         height: 10px;
         background: rgb(2, 0, 36);
         background: var(--bg_gradient);
@@ -144,7 +128,6 @@ h1 {
         position: absolute;
         left: 0;
         top: 0;
-        width: 120%;
         right: 0;
         bottom: 0;
         background: rgb(2, 0, 36);
@@ -159,7 +142,7 @@ h1 {
         z-index: 0;
         bottom: 5px;
         width: 10px;
-        left: 120%;
+        left: 100%;
         transform: skew(0, -45deg);
     }
 
@@ -207,19 +190,27 @@ h1 {
         }
 
     .block-cube.block-input:focus,
-    .block-cube.block-input:hover
-    .block-cube.block-input .bg-top, .block-cube.block-input .bg-right, .block-cube.block-input .bg {
-        background: rgba(255, 255, 255, 0.8);
-    }
+    .block-cube.block-input:hover {
+        .block-cube.block-input .bg-top, .block-cube.block-input .bg-right, .block-cube.block-input .bg
 
-    .block-cube.block-cube-hover:focus,
-    .block-cube.block-cube-hover:hover .bg .bg-inner {
-        top: 100%;
-    }
+{
+    background: rgba(255, 255, 255, 0.8);
+}
+
+}
+
+.block-cube.block-cube-hover:focus,
+.block-cube.block-cube-hover:hover .bg .bg-inner {
+    top: 100%;
+}
 
 .block-input {
     margin-bottom: 20px; /* Increased gap between form elements */
 }
+
+
+
+
 
 .checkbox-wrapper-26 {
     display: flex;
@@ -245,26 +236,20 @@ h1 {
     }
 
 .terms-text {
-    position: absolute;
-    top: 483px;
-    left: 115px;
     color: white;
+    margin-top: 15px;
     margin-bottom: 20px;
     color: #007bff;
     text-decoration: none;
     padding: 5px 10px;
-    display: inline-block;
+    = display: inline-block;
     transition: background-color 0.3s, color 0.3s;
 }
 
-    .terms-text a, .termsTxt {
-        color: white;
+    .terms-text a:hover {
+        background-color: #007bff;
+        color: #fff;
     }
-
-        .terms-text a:hover {
-            background-color: #007bff;
-            color: #fff;
-        }
 
 .checkbox-wrapper-26 * {
     -webkit-tap-highlight-color: transparent;
@@ -274,6 +259,8 @@ h1 {
 .checkbox-wrapper-26 input[type="checkbox"] {
     display: none;
 }
+
+
 
 .checkbox-wrapper-26 label:before {
     content: "";
@@ -418,15 +405,18 @@ h1 {
     }
 
 
+
 /*FOR HEADING*/
 .C {
-    margin-top: 20px;
+    margin-bottom: 24px;
 }
 
 @font-face {
     font-family: neon;
     src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
 }
+
+
 
 .neon {
     font-family: neon;
