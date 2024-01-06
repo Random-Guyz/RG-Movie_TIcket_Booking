@@ -159,7 +159,6 @@
     <Content Include="styles\login.css" />
     <Content Include="styles\sign_up.css" />
     <Content Include="styles\TermsStyle.css" />
-    <Content Include="TermsModal.aspx" />
     <Content Include="TermsScript.js" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -223,13 +222,6 @@
     </Compile>
     <Compile Include="sign_up.aspx.designer.cs">
       <DependentUpon>sign_up.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="TermsModal.aspx.cs">
-      <DependentUpon>TermsModal.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TermsModal.aspx.designer.cs">
-      <DependentUpon>TermsModal.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

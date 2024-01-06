@@ -1,6 +1,19 @@
 ﻿let tab_lists = document.querySelectorAll(".tabs_list ul li");
 let tab_items = document.querySelectorAll(".tab_item");
+let termBtn = document.getElementById("termBtn");
+let termModal = document.getElementById("terms");
 
+let signForm = document.querySelector(".loginForm");
+
+//Terms Visibility
+
+termBtn.addEventListener('click', () => {
+    signForm.style.display = "none";
+    termModal.style.display = "block";
+});
+
+
+//Terms navigation 
 tab_lists.forEach(function (list) {
     list.addEventListener("click", function () {
         let tab_data = list.getAttribute("data-tc");
@@ -27,7 +40,8 @@ let declineBtn = document.getElementById("decBtn");
 
 acceptBtn.addEventListener('click', () => {
     alert("Thank you for accepting our Terms & Conditions");
-    window.location.href = "sign_up.aspx";
+    termModal.style.display = "none";
+    signForm.style.display = "block";
 });
 
 declineBtn.addEventListener('click', () => {

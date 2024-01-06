@@ -1,6 +1,6 @@
 ﻿
 :root {
-    --primary-clr: #FF0325;
+    --primary-clr: #FEE505;
     --white: #fff;
     --tabs-list-bg-clr: #dfc8fd;
     --btn-hvr: #4e03b0;
@@ -24,6 +24,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#terms{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-30%);
+    z-index: 10;
+    display: none;
 }
 
 .wrapper {
@@ -70,6 +79,7 @@ body {
         }
 
     .tc_wrap .tabs_list ul {
+        background-color: #343434;
         padding: 70px 20px;
         text-align: right;
     }
@@ -81,6 +91,7 @@ body {
             cursor: pointer;
             font-weight: bold;
             transition: all 0.5s ease;
+            color: white;
         }
 
             .tc_wrap .tabs_list ul li:before {
@@ -112,6 +123,7 @@ body {
 
     .tc_wrap .tabs_content .tab_body .tab_item p {
         margin-bottom: 20px;
+        color: white;
     }
 
     .tc_wrap .tabs_content .tab_body .tab_item.active {
