@@ -6,8 +6,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>RG - Book Tickets</title>
+    <link rel="icon" type="image/png" href="Images/favicon-logo.png" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <link rel="stylesheet" type="text/css" href="styles/BookingPage.css" />
+    <link rel="stylesheet" type="text/css" href="styles/payModal.css" />
 </head>
 <body>
 
@@ -307,10 +309,10 @@
         <div class="container p-20 m-10 text-white Inner-Container">
             <div class="custom-ticket-container">
 
-                <div class="custom-ticket custom-movTicket">
+                <div class="custom-ticket custom-movTicket pt-3">
                     <form method="post">
                         <div class="custom-top bg-dark">
-                            <h1 style="width: 120px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><%= MovTitle %></h1>
+                            <h1 style="width: 120px; margin-top: 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><%= MovTitle %></h1>
 
                             <div class="custom-MovPoster">
                                 <img src="<%=MovImgSrc %>" alt="<%= MovTitle %> Poster" />
@@ -334,13 +336,74 @@
                             </div>
 
                             <div id="ticket-actions" class="d-flex px-4 mx-3 justify-content-between">
-                                <button id="submitMail" class="btn btn-outline-warning" type="submit">Proceed</button>
+                                <button id="proceedBtn" class="btn btn-outline-warning" type="submit">Proceed</button>
                                 <button class="btn btn-warning">Rs.500/-</button>
                             </div>
 
                         </div>
                     </form>
+
                 </div>
+            </div>
+        </div>
+
+        <%--Payment Modal--%>
+        <div class="pay-wrapper" id="payModal">
+            <div class="payment-container">
+                <form id="paymentForm">
+                    <h1>
+                        <i class="fas fa-shipping-fast"></i>
+                        Contact Details
+                    </h1>
+                    <div class="name">
+                        <div>
+                            <label for="f-name">First Name</label>
+                            <input type="text" name="f-name" id="fn" onkeyup="isempty()" />
+                        </div>
+                        <div>
+                            <label for="l-name">Last Name</label>
+                            <input type="text" name="l-name" id="ln" onkeyup="isempty()" />
+                        </div>
+                    </div>
+                    <div class="street">
+                        <label for="name">Email Address</label>
+                        <input type="text" name="address" id="ad" onkeyup="isempty()" />
+                    </div>
+                    <div class="street">
+                        <div>
+                            <label for="city">Mobile no</label>
+                            <input type="text" name="city" id="mn" onkeyup="isempty()" />
+                        </div>
+                    </div>
+                    <h1>
+                        <i class="far fa-credit-card"></i>Payment Information
+                    </h1>
+                    <div class="cc-num">
+                        <label for="card-num">UPI ID</label>
+                        <input type="text" name="card-num" id="up" onkeyup="isempty()" />
+                    </div>
+                    <div class="cc-num">
+                        <label for="card-num">Card No.</label>
+                        <input type="text" name="card-num" id="cn" onkeyup="isempty()" />
+                    </div>
+                    <div class="cc-info">
+                        <div>
+                            <label for="card-num">Exp</label>
+                            <input type="text" name="expire" id="ex" onkeyup="isempty()" />
+                        </div>
+                        <div>
+                            <label for="card-num">CCV</label>
+                            <input type="text" name="security" id="cv" onkeyup="isempty()" />
+                        </div>
+                    </div>
+
+                    <div class="btns">
+                        <button onclick="pay(event)" id="buy">Pay</button>
+                        <button onclick="pay(event)" id="cancel">Cancel</button>
+                    </div>
+
+
+                </form>
             </div>
         </div>
 

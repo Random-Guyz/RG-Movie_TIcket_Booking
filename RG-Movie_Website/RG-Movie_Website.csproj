@@ -157,6 +157,7 @@
     <Content Include="styles\BookingPage.css" />
     <Content Include="styles\forget_password.css" />
     <Content Include="styles\login.css" />
+    <Content Include="styles\payModal.css" />
     <Content Include="styles\sign_up.css" />
     <Content Include="styles\TermsStyle.css" />
     <Content Include="TermsScript.js" />

@@ -74,3 +74,23 @@ resetBtn.addEventListener('click', () => {
         seat.classList.remove("selected");
     });
 });
+
+//Payment Modal Visibility
+
+let proceedBtn = document.getElementById("proceedBtn");
+let paymentModal = document.getElementById("payModal");
+
+//Modal Buttons
+let payBtn = document.getElementById("buy");
+let cancelBtn = document.getElementById("cancel");
+
+proceedBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    paymentModal.style.display = "block";
+
+});
+
+function pay(e) {
+    e.preventDefault();
+    paymentModal.style.display = "none";
+}

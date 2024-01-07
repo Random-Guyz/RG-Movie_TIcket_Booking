@@ -52,7 +52,7 @@
                         <li class="nav-item mb-2 foot-li"><a href="#" class="nav-link p-0 text-secondary">Home</a></li>
                         <li class="nav-item mb-2 foot-li"><a href="#MovSection" class="nav-link p-0 text-secondary">Movies</a></li>
                         <li class="nav-item mb-2 foot-li"><a href="./LoginPage.aspx" class="nav-link p-0 text-secondary">Login</a></li>
-                        <li class="nav-item mb-2 foot-li"><a href="#" class="nav-link p-0 text-secondary">Sign up</a></li>
+                        <li class="nav-item mb-2 foot-li"><a href="./sign_up.aspx" class="nav-link p-0 text-secondary">Sign up</a></li>
                     </ul>
                 </div>
 
