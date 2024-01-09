@@ -178,3 +178,7 @@ C:\Users\DELL\Desktop\RG-Movie_TIcket_Booking\RG-Movie_Website\obj\Debug\RG-Movi
 C:\Users\DELL\Desktop\RG-Movie_TIcket_Booking\RG-Movie_Website\obj\Debug\RG-Movie_Website.csproj.CopyComplete
 C:\Users\DELL\Desktop\RG-Movie_TIcket_Booking\RG-Movie_Website\obj\Debug\RG-Movie_Website.dll
 C:\Users\DELL\Desktop\RG-Movie_TIcket_Booking\RG-Movie_Website\obj\Debug\RG-Movie_Website.pdb
+C:\Users\DELL\Desktop\RG-Movie_TIcket_Booking\RG-Movie_Website\bin\Newtonsoft.Json.dll
+C:\Users\DELL\Desktop\RG-Movie_TIcket_Booking\RG-Movie_Website\bin\Stripe.net.dll
+C:\Users\DELL\Desktop\RG-Movie_TIcket_Booking\RG-Movie_Website\bin\Newtonsoft.Json.xml
+C:\Users\DELL\Desktop\RG-Movie_TIcket_Booking\RG-Movie_Website\bin\Stripe.net.xml

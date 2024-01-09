@@ -1,27 +1,27 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="sign_up.aspx.cs" Inherits="RG_Movie_Website.sign_up" %>
 
 <%@ Register Src="~/Navbar.ascx" TagName="Navbar" TagPrefix="uc" %>
-<%@ Register Src="~/SignUpForm.ascx" TagName="SignUpForm" TagPrefix="uc" %>
-
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<head>
     <title>RG - Sign Up Page</title>
     <%--Main Style Sheet--%>
     <link rel="stylesheet" type="text/css" href="styles/sign_up.css" />
     <%--Terms & Condition Style Sheet--%>
     <link rel="stylesheet" type="text/css" href="styles/TermsStyle.css" />
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
     <link rel="icon" type="image/png" href="Images/favicon-logo.png" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
 
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+
 </head>
 <body class="formBody">
 
-    <uc:Navbar runat="server" />
+
 
     <div class="slider-container">
         <div class="slider">
@@ -33,10 +33,122 @@
         </div>
     </div>
 
+    <form class="loginForm" action="sign_up.aspx" runat="server" method="post" autocomplete="off">
 
-    <%--Sign UP Form--%>
 
-    <uc:SignUpForm runat="server" />
+        <div class="C">
+            <div class="neon">SIGN </div>
+            <div class="flux">UP </div>
+        </div>
+
+        <div class="control block-cube block-input">
+            <input id="N" name="name" pass="name" type="text" placeholder="Enter Your Name" autofocus="autofocus" />
+            <div class="bg-top">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="bg-right">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="bg">
+                <div class="bg-inner"></div>
+            </div>
+        </div>
+        <script> 
+            function namecheck() {
+                let uname = document.querySelector("input[name=name]");
+                if (uname.value.trim() !== "") { alert("Name Field is Empty"); };
+            }
+        </script>
+
+
+        <div class="control block-cube block-input">
+            <input name="email" pass="uname" type="email" placeholder="Enter Your Email" />
+            <div class="bg-top">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="bg-right">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="bg">
+                <div class="bg-inner"></div>
+            </div>
+        </div>
+
+        <div class="control block-cube block-input">
+            <input name="mob" pass="uname" type="number" placeholder="Enter Your Mobile Number" />
+            <div class="bg-top">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="bg-right">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="bg">
+                <div class="bg-inner"></div>
+            </div>
+        </div>
+
+        <div class="control block-cube block-input">
+            <input name="username" pass="uname" type="text" placeholder="Enter Your Username" />
+            <div class="bg-top">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="bg-right">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="bg">
+                <div class="bg-inner"></div>
+            </div>
+        </div>
+
+        <div class="control block-cube block-input">
+            <input name="password" id="pwd" type="password" placeholder="Enter Your Password" oninput="validateNumericInput(this)" />
+            <div class="bg-top">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="bg-right">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="bg">
+                <div class="bg-inner"></div>
+            </div>
+        </div>
+
+        <div class="control block-cube block-input">
+            <input name="CONpassword" id="Conpwd" type="password" placeholder="Conform Your Password" oninput="validateNumericInput(this)" />
+            <div class="bg-top">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="bg-right">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="bg">
+                <div class="bg-inner"></div>
+            </div>
+        </div>
+
+        <div class="checkbox-wrapper-26">
+            <input type="checkbox" id="termsCheckbox" name="termsCheckbox" onclick="validate()" />
+            <label for="termsCheckbox">
+                <div class="tick_mark"></div>
+            </label>
+        </div>
+
+        <div class="terms-text">
+            <label for="termsCheckbox">I Read & Agree to the <a href="#" id="termBtn">Terms and Conditions</a></label>
+        </div>
+
+        <asp:Button ID="SIGNBtnasp" name="SIGNBtnasp" class="button-54" runat="server" Text="SIGN UP" OnClick="SIGNBtnasp_Click" />
+
+
+
+    </form>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script>
+        document.getElementById("SIGNBtnasp").disabled = true;
+        
+    </script>
+
 
 
     <%--Terms & Condition Modal--%>
@@ -119,80 +231,71 @@
     <script type="text/javascript" src="TermsScript.js"></script>
     <script type="text/javascript">
 
-        let uname = document.querySelector("input[name=name]");
-        let emaill = document.querySelector("input[name=email]");
-        let mobi = document.querySelector("input[name=mob]");
-        let usname = document.querySelector("input[name=username]");
-        let pass = document.querySelector("input[name=password]");
-        let cpass = document.querySelector("input[name=CONpassword]");
-        let terms = document.getElementById("termsCheckbox");
-        let btn = document.getElementById('loginBtn');
 
-        btn.addEventListener('click', (e) => {
-
-            e.preventDefault();
-
-            if (uname.value.trim() !== "") {
-                if (emaill.value.trim() !== "") {
-                    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                    if (emailRegex.test(emaill.value.trim())) {
-                        if (mobi.value.trim() !== "") {
-                            if (mobi.value.trim().length === 10) {
-                                if (usname.value.trim() !== "") {
-                                    if (pass.value.trim() !== "") {
-                                        if (cpass.value.trim() !== "") {
-                                            if (pass.value.trim() === cpass.value.trim()) {
-                                                //if (terms.checked) {
-                                                //    // Display the OTP container and blur the background
-                                                //    document.getElementById("otp-container").style.display = "block";
-                                                //    document.getElementById("blur-container").style.backdropFilter = "blur(8px)";
-
-                                                //} else {
-                                                //    alert("Please Agree Terms&Conditions");
-                                                //}
-                                            } else {
-                                                alert("Both Passwords Do Not Match");
-                                            }
-                                        } else {
-                                            alert("Please Confirm Password");
-                                        }
-                                    } else {
-                                        alert("Password Field is Empty");
-                                    }
-                                } else {
-                                    alert("UserName Field is Empty");
-                                }
-                            } else {
-                                alert("Enter Mobile Number Correctly");
-                            }
-                        } else {
-                            alert("Mobile Field is Empty");
-                        }
-                    } else {
-                        alert("Please enter a valid email address.");
-                    }
-                } else {
-                    alert("Email Field is Empty");
-                }
-            } else {
-                alert("Name Field is Empty");
-            }
-        });
-
-        function verifyOTP() {
-            var enteredOTP = document.getElementById("otpInput").value;
-
-            if (enteredOTP === "1234") {
-                alert("OTP Verified Successfully!");
-                // Hide the OTP container
-                document.getElementById("otp-container").style.display = "none";
-
-                window.location.href = "/";
-
-            } else {
-                alert("Invalid OTP. Please try again.");
-            }
-        }
+     function validateNumericInput(inputElement) {
+         
+         inputElement.value = inputElement.value.replace(/[^0-9]/g, '');
+     }
+    
+     function validate(){
+     let uname = document.querySelector("input[name=name]");
+     let emaill = document.querySelector("input[name=email]");
+     let mobi = document.querySelector("input[name=mob]");
+     let usname = document.querySelector("input[name=username]");
+     let pass = document.querySelector("input[name=password]");
+     let cpass = document.querySelector("input[name=CONpassword]");
+     let terms = document.getElementById("termsCheckbox");
+     
+         terms.checked = false;
+         if (uname.value.trim() !== "") {
+             if (emaill.value.trim() !== "") {
+                 var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                 if (emailRegex.test(emaill.value.trim())) {
+                     if (mobi.value.trim() !== "") {
+                         if (mobi.value.trim().length === 10) {
+                             if (usname.value.trim() !== "") {
+                                 if (pass.value.trim() !== "") {
+                                     if (cpass.value.trim() !== "") {
+                                         if (pass.value.trim() === cpass.value.trim()) {
+                                             
+                                                 // Display the OTP container and blur the background
+                                                 //document.getElementById("otp-container").style.display = "block";
+                                                 //document.getElementById("blur-container").style.backdropFilter = "blur(8px)";
+                                                 document.getElementById("SIGNBtnasp").disabled = false;
+                                                 terms.checked = true;
+                                           
+                                         } else {
+                                             alert("Both Passwords Do Not Match");
+                                             terms.checked = true;
+                                         }
+                                     } else {
+                                         alert("Please Confirm Password");
+                                     }
+                                 } else {
+                                     alert("Password Field is Empty");
+                                 }
+                             } else {
+                                 alert("UserName Field is Empty");
+                             }
+                         } else {
+                             alert("Enter Mobile Number Correctly");
+                         }
+                     } else {
+                         alert("Mobile Field is Empty");
+                     }
+                 } else {
+                     alert("Please enter a valid email address.");
+                 }
+             } else {
+                 alert("Email Field is Empty");
+             }
+         } else {
+             alert("Name Field is Empty");
+         }
+     };
+     
+     
     </script>
+
 </body>
 </html>

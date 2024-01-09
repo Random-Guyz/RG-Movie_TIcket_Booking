@@ -1,8 +1,9 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="forget_password.aspx.cs" Inherits="RG_Movie_Website.forget_password" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Forgot Password</title>
@@ -14,7 +15,7 @@
 
     <div class="container">
         <h2 class="title">
-            <span class="title-word title-word-1">DON,T</span>
+            <span class="title-word title-word-1">DON'T</span>
             <span class="title-word title-word-2">WORRY</span>
             <span class="title-word title-word-3">WE</span>
             <span class="title-word title-word-4">HAVE</span>
@@ -23,14 +24,14 @@
             <span class="title-word title-word-3">COVERED ! ! !</span>
         </h2>
 
-        <form class="forgotForm" autocomplete="off">
+        <form class="forgotForm" runat="server" autocomplete="off">
             <div class="C">
                 <div class="neon">FORGOT </div>
                 <div class="flux">PASSWORD </div>
             </div>
 
             <div class="control block-cube block-input">
-                <input name="mobile" type="number" placeholder="Enter Mobile Number"  autofocus required />
+                <input name="username" type="text" placeholder="Enter Your UserName" />
                 <div class="bg-top">
                     <div class="bg-inner"></div>
                 </div>
@@ -42,9 +43,21 @@
                 </div>
             </div>
 
-            <button class="button-54" role="button" id="resetBtn" type="button">
-                Reset Password
-            </button>
+            <div class="control block-cube block-input">
+                <input name="newpass" type="number" placeholder="Enter New Password" />
+                <div class="bg-top">
+                    <div class="bg-inner"></div>
+                </div>
+                <div class="bg-right">
+                    <div class="bg-inner"></div>
+                </div>
+                <div class="bg">
+                    <div class="bg-inner"></div>
+                </div>
+            </div>
+
+            <asp:Button class="button-54" role="button" ID="resetBtn" runat="server" Text="SUBMIT" OnClick="resetBtn_Click" />
+
 
             <div class="signup">
                 <a href="LoginPage.aspx">Back to Login</a>
@@ -53,23 +66,23 @@
         </form>
 
     </div>
-    <script type="text/javascript">
+    <%-- <script type="text/javascript">
         // Forgot Password Page Script
         let mob = document.querySelector("input[type=number]");
         let resetBtn = document.getElementById('resetBtn');
 
-        resetBtn.addEventListener('click', () => {
-            if (mob.value !== "") {
-                if (mob.value.trim().length === 10) {
-                    alert("Password reset link sent to your email.");
-                    mob.value = ""; // Use assignment operator (=) instead of comparison operator (==)
-                } else {
-                    alert("Please Enter Correct Mobile Number");
-                }
-            } else {
-                alert("Please enter your Mobile Number");
-            }
-        });
-    </script>
+        //resetBtn.addEventListener('click', () => {
+        //    if (mob.value !== "") {
+        //        if (mob.value.trim().length === 10) {
+        //            alert("Password reset link sent to your email.");
+        //            mob.value = ""; // Use assignment operator (=) instead of comparison operator (==)
+        //        } else {
+        //            alert("Please Enter Correct Mobile Number");
+        //        }
+        //    } else {
+        //        alert("Please enter your Mobile Number");
+        //    }
+        //});
+    </script>--%>
 </body>
 </html>

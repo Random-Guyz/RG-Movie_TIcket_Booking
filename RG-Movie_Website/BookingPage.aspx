@@ -329,7 +329,7 @@
 
                                 <div class="custom-row custom-row-2">
                                     <p><span>Time</span> <span id="mtime" name="timing">8:00 AM</span></p>
-                                    <p class="custom-row--center"><span>Screen</span>1</p>
+                                    <p class="custom-row--center"><span>Qnt</span><span id="qnt" name="seatQnt">0</span></p>
                                     <p class="custom-row--right"><span>Date</span> <span id="mdate" name="date">22 SAT</span></p>
                                 </div>
 
@@ -358,21 +358,21 @@
                     <div class="name">
                         <div>
                             <label for="f-name">First Name</label>
-                            <input type="text" name="f-name" id="fn" onkeyup="isempty()" />
+                            <input type="text" name="f-name" id="fn" required autofocus="autofocus" />
                         </div>
                         <div>
                             <label for="l-name">Last Name</label>
-                            <input type="text" name="l-name" id="ln" onkeyup="isempty()" />
+                            <input type="text" name="l-name" id="ln" required />
                         </div>
                     </div>
                     <div class="street">
                         <label for="name">Email Address</label>
-                        <input type="text" name="address" id="ad" onkeyup="isempty()" />
+                        <input type="text" name="address" id="ad" required />
                     </div>
                     <div class="street">
                         <div>
                             <label for="city">Mobile no</label>
-                            <input type="text" name="city" id="mn" onkeyup="isempty()" />
+                            <input type="text" name="city" id="mn" required />
                         </div>
                     </div>
                     <h1>
@@ -380,25 +380,25 @@
                     </h1>
                     <div class="cc-num">
                         <label for="card-num">UPI ID</label>
-                        <input type="text" name="card-num" id="up" onkeyup="isempty()" />
+                        <input type="text" name="card-num" id="up" required />
                     </div>
                     <div class="cc-num">
                         <label for="card-num">Card No.</label>
-                        <input type="text" name="card-num" id="cn" onkeyup="isempty()" />
+                        <input type="text" name="card-num" id="cn" required />
                     </div>
                     <div class="cc-info">
                         <div>
                             <label for="card-num">Exp</label>
-                            <input type="text" name="expire" id="ex" onkeyup="isempty()" />
+                            <input type="text" name="expire" id="ex" required />
                         </div>
                         <div>
                             <label for="card-num">CCV</label>
-                            <input type="text" name="security" id="cv" onkeyup="isempty()" />
+                            <input type="text" name="security" id="cv" required />
                         </div>
                     </div>
 
                     <div class="btns">
-                        <button onclick="pay(event)" id="buy">Pay</button>
+                        <button id="buy" onclick="window.location.href = 'TicketPage.aspx'" type="submit">Pay</button>
                         <button onclick="pay(event)" id="cancel">Cancel</button>
                     </div>
 
