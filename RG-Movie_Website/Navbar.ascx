@@ -12,7 +12,7 @@
             </ul>
             <form runat="server" class="d-flex">
                 <asp:Button ID="Button1" runat="server" Text="Login" CssClass="btn btn-outline-warning me-4" OnClick="LoginBtn_Click" />
-                <asp:Button ID="Button2" runat="server" Text="Sign In" CssClass="btn btn-outline-warning me-4" OnClick="SignInBtn_Click" />
+                <asp:Button ID="Button2" runat="server" Text="Sign Up" CssClass="btn btn-outline-warning me-4" OnClick="SignInBtn_Click" />
             </form>
         </div>
     </div>

@@ -41,32 +41,32 @@
                 <div class="flex-column pe-5 me-2">
                     <div class="AvailableDays mt-3">
                         <div class="MovDate d-inline">
-                            <p>20</p>
+                            <p>08</p>
+                            <p>MON</p>
+                        </div>
+                    </div>
+                    <div class="AvailableDays mt-3">
+                        <div class="MovDate d-inline">
+                            <p>09</p>
+                            <p>TUE</p>
+                        </div>
+                    </div>
+                    <div class="AvailableDays days-active mt-3">
+                        <div class="MovDate d-inline">
+                            <p>10</p>
+                            <p>WED</p>
+                        </div>
+                    </div>
+                    <div class="AvailableDays mt-3">
+                        <div class="MovDate d-inline">
+                            <p>11</p>
                             <p>THU</p>
                         </div>
                     </div>
                     <div class="AvailableDays mt-3">
                         <div class="MovDate d-inline">
-                            <p>21</p>
+                            <p>12</p>
                             <p>FRI</p>
-                        </div>
-                    </div>
-                    <div class="AvailableDays days-active mt-3">
-                        <div class="MovDate d-inline">
-                            <p>22</p>
-                            <p>SAT</p>
-                        </div>
-                    </div>
-                    <div class="AvailableDays mt-3">
-                        <div class="MovDate d-inline">
-                            <p>23</p>
-                            <p>SUN</p>
-                        </div>
-                    </div>
-                    <div class="AvailableDays mt-3">
-                        <div class="MovDate d-inline">
-                            <p>24</p>
-                            <p>MON</p>
                         </div>
                     </div>
                 </div>
@@ -401,7 +401,6 @@
                         <button onclick="pay(event)" id="buy">Pay</button>
                         <button onclick="pay(event)" id="cancel">Cancel</button>
                     </div>
-
 
                 </form>
             </div>

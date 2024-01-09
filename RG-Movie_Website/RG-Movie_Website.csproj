@@ -152,6 +152,7 @@
     <Content Include="MovieSection.ascx" />
     <Content Include="Navbar.ascx" />
     <Content Include="script.js" />
+    <Content Include="SignUpForm.ascx" />
     <Content Include="sign_up.aspx" />
     <Content Include="style.css" />
     <Content Include="styles\BookingPage.css" />
@@ -217,6 +218,13 @@
       <DependentUpon>Navbar.ascx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SignUpForm.ascx.cs">
+      <DependentUpon>SignUpForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignUpForm.ascx.designer.cs">
+      <DependentUpon>SignUpForm.ascx</DependentUpon>
+    </Compile>
     <Compile Include="sign_up.aspx.cs">
       <DependentUpon>sign_up.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

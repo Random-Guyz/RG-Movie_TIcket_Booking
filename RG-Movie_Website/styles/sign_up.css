@@ -9,8 +9,8 @@
 }
 
 .formBody {
-    margin: 0; /* Remove default margin */
-    overflow: hidden; /* Hide scrollbar caused by the slider */
+    margin: 0; 
+    overflow: hidden; 
     position: relative;
     height: 100vh;
 }
@@ -27,13 +27,13 @@
 
 .slider {
     display: flex;
-    width: 400%; /* Adjust based on the number of images */
+    width: 400%; 
     height: 100%;
     animation: slide 30s linear infinite;
 }
 
     .slider img {
-        width: 25%; /* Adjust based on the number of images */
+        width: 25%; 
         height: 100%;
         object-fit: cover;
     }
@@ -215,7 +215,7 @@ h1 {
 .checkbox-wrapper-26 {
     display: flex;
     align-items: center;
-    margin-bottom: 20px; /* Adjust the margin as needed */
+    margin-bottom: 20px;
 }
 
     .checkbox-wrapper-26 label {
@@ -225,7 +225,7 @@ h1 {
         display: block;
         width: var(--size);
         height: var(--size);
-        margin-right: 10px; /* Adjust the margin as needed */
+        margin-right: 10px;
         background-color: #f72414;
         border-radius: 50%;
         box-shadow: 0 var(--shadow) #ffbeb8;

@@ -1,6 +1,8 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="sign_up.aspx.cs" Inherits="RG_Movie_Website.sign_up" %>
 
 <%@ Register Src="~/Navbar.ascx" TagName="Navbar" TagPrefix="uc" %>
+<%@ Register Src="~/SignUpForm.ascx" TagName="SignUpForm" TagPrefix="uc" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -10,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="styles/sign_up.css" />
     <%--Terms & Condition Style Sheet--%>
     <link rel="stylesheet" type="text/css" href="styles/TermsStyle.css" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
     <link rel="icon" type="image/png" href="Images/favicon-logo.png" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" />
@@ -30,121 +33,11 @@
         </div>
     </div>
 
-    <form class="loginForm" autocomplete="off">
-        <div class="C">
-            <div class="neon">SIGN </div>
-            <div class="flux">UP </div>
-        </div>
 
-        <div class="control block-cube block-input">
-            <input name="name" pass="name" type="text" placeholder="Enter Your Name" autofocus="autofocus" required />
-            <div class="bg-top">
-                <div class="bg-inner"></div>
-            </div>
-            <div class="bg-right">
-                <div class="bg-inner"></div>
-            </div>
-            <div class="bg">
-                <div class="bg-inner"></div>
-            </div>
-        </div>
+    <%--Sign UP Form--%>
 
-        <div class="control block-cube block-input">
-            <input name="email" pass="uname" type="email" placeholder="Enter Your Email" />
-            <div class="bg-top">
-                <div class="bg-inner"></div>
-            </div>
-            <div class="bg-right">
-                <div class="bg-inner"></div>
-            </div>
-            <div class="bg">
-                <div class="bg-inner"></div>
-            </div>
-        </div>
+    <uc:SignUpForm runat="server" />
 
-        <div class="control block-cube block-input">
-            <input name="mob" pass="uname" type="number" placeholder="Enter Your Mobile Number" />
-            <div class="bg-top">
-                <div class="bg-inner"></div>
-            </div>
-            <div class="bg-right">
-                <div class="bg-inner"></div>
-            </div>
-            <div class="bg">
-                <div class="bg-inner"></div>
-            </div>
-        </div>
-
-        <div class="control block-cube block-input">
-            <input name="username" pass="uname" type="text" placeholder="Enter Your Username" />
-            <div class="bg-top">
-                <div class="bg-inner"></div>
-            </div>
-            <div class="bg-right">
-                <div class="bg-inner"></div>
-            </div>
-            <div class="bg">
-                <div class="bg-inner"></div>
-            </div>
-        </div>
-
-        <div class="control block-cube block-input">
-            <input name="password" id="pwd" type="password" placeholder="Enter Your Password" />
-            <div class="bg-top">
-                <div class="bg-inner"></div>
-            </div>
-            <div class="bg-right">
-                <div class="bg-inner"></div>
-            </div>
-            <div class="bg">
-                <div class="bg-inner"></div>
-            </div>
-        </div>
-
-        <div class="control block-cube block-input">
-            <input name="CONpassword" id="Conpwd" type="password" placeholder="Conform Your Password" />
-            <div class="bg-top">
-                <div class="bg-inner"></div>
-            </div>
-            <div class="bg-right">
-                <div class="bg-inner"></div>
-            </div>
-            <div class="bg">
-                <div class="bg-inner"></div>
-            </div>
-        </div>
-
-        <div class="checkbox-wrapper-26">
-            <input type="checkbox" id="termsCheckbox" name="termsCheckbox" />
-            <label for="termsCheckbox">
-                <div class="tick_mark"></div>
-            </label>
-        </div>
-
-        <div class="terms-text">
-            <label for="termsCheckbox">I Read & Agree to the <a href="#" id="termBtn">Terms and Conditions</a></label>
-        </div>
-
-        <button class="btn block-cube block-cube-hover" id="loginBtn" type="button">
-            <div class="bg-top">
-                <div class="bg-inner"></div>
-            </div>
-            <div class="bg-right">
-                <div class="bg-inner"></div>
-            </div>
-            <div class="bg">
-                <div class="bg-inner"></div>
-            </div>
-            <div class="text">SIGN UP</div>
-        </button>
-
-        <div class="otp-container" id="otp-container">
-            <label for="otpInput" id="otplable">Enter OTP:</label>
-            <input type="text" id="otpInput" maxlength="3" />
-            <button id="btnVerify" onclick="verifyOTP()">Verify OTP</button>
-        </div>
-
-    </form>
 
     <%--Terms & Condition Modal--%>
 
@@ -235,7 +128,10 @@
         let terms = document.getElementById("termsCheckbox");
         let btn = document.getElementById('loginBtn');
 
-        btn.addEventListener('click', () => {
+        btn.addEventListener('click', (e) => {
+
+            e.preventDefault();
+
             if (uname.value.trim() !== "") {
                 if (emaill.value.trim() !== "") {
                     var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -246,14 +142,14 @@
                                     if (pass.value.trim() !== "") {
                                         if (cpass.value.trim() !== "") {
                                             if (pass.value.trim() === cpass.value.trim()) {
-                                                if (terms.checked) {
-                                                    // Display the OTP container and blur the background
-                                                    document.getElementById("otp-container").style.display = "block";
-                                                    document.getElementById("blur-container").style.backdropFilter = "blur(8px)";
+                                                //if (terms.checked) {
+                                                //    // Display the OTP container and blur the background
+                                                //    document.getElementById("otp-container").style.display = "block";
+                                                //    document.getElementById("blur-container").style.backdropFilter = "blur(8px)";
 
-                                                } else {
-                                                    alert("Please Agree Terms&Conditions");
-                                                }
+                                                //} else {
+                                                //    alert("Please Agree Terms&Conditions");
+                                                //}
                                             } else {
                                                 alert("Both Passwords Do Not Match");
                                             }
@@ -286,12 +182,12 @@
         function verifyOTP() {
             var enteredOTP = document.getElementById("otpInput").value;
 
-            if (enteredOTP === "123") {
+            if (enteredOTP === "1234") {
                 alert("OTP Verified Successfully!");
                 // Hide the OTP container
                 document.getElementById("otp-container").style.display = "none";
 
-                window.location.href = "HomePage.aspx";
+                window.location.href = "/";
 
             } else {
                 alert("Invalid OTP. Please try again.");

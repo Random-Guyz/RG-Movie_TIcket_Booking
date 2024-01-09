@@ -26,7 +26,6 @@ namespace RG_Movie_Website
                 MovGenre = Request.QueryString["genre"];
                 MovImgSrc = Request.QueryString["img"];
             }
-
         }
     }
 }
