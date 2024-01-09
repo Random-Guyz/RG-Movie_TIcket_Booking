@@ -4,6 +4,7 @@ let theater = document.getElementById("mtheater");
 let mdate = document.getElementById("mdate");
 let mtime = document.getElementById("mtime");
 
+
 //Theater dropdown code
 let theaterDropdown = document.getElementById("theaterDropdown");
 
@@ -59,18 +60,35 @@ timeBoxes.forEach(tbox => {
     });
 });
 
-//Seating Section 
+//Seating Section & Pricing
 let seats = document.querySelectorAll(".seat");
 let resetBtn = document.getElementById("resetBtn");
+
+let priceLabel = document.getElementById("price");
+
+let price = 0;
 
 seats.forEach(seat => {
     seat.addEventListener('click', () => {
         seat.classList.toggle("selected");
+
+        if (seat.classList.contains('selected') && !seat.classList.contains('occupied')) {
+            price += 100;
+        }
+        else if (seat.classList.contains('occupied')) {
+            price = price;
+        }
+        else if (!seat.classList.contains('selected')) {
+            price -= 100;
+        }
+
+        priceLabel.innerText = price;
     });
 });
 
 resetBtn.addEventListener('click', () => {
     seats.forEach(seat => {
+        priceLabel.innerText = 0;
         seat.classList.remove("selected");
     });
 });

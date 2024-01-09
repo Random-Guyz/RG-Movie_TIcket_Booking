@@ -337,7 +337,7 @@
 
                             <div id="ticket-actions" class="d-flex px-4 mx-3 justify-content-between">
                                 <button id="proceedBtn" class="btn btn-outline-warning" type="submit">Proceed</button>
-                                <button class="btn btn-warning">Rs.500/-</button>
+                                <button class="btn btn-warning">Rs.<span id="price">0</span>/-</button>
                             </div>
 
                         </div>
