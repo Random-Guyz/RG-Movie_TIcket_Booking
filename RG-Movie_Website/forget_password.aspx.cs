@@ -28,7 +28,7 @@ namespace RG_Movie_Website
 
             string ErrorMsg = "";
 
-            using (SqlConnection conn = new SqlConnection("Server=localhost\\SQLEXPRESS;Database=Users;Trusted_Connection=True;"))
+            using (SqlConnection conn = new SqlConnection("Server=localhost\\SQLEXPRESS;Database=Users;Trusted_Connection=True"))
             {
                 try
                 {

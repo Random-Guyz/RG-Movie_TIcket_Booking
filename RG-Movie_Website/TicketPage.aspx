@@ -18,9 +18,7 @@
 
     <div class="ticket">
         <div class="left">
-            <div class="image">
-
-                <%--<img class="image" src="Images/Posters/salaar_poster.jpg"/>--%>
+            <div class="image" style="background-image: url('<%= Session["MovImgSrc"] %>');">
 
                 <p class="admit-one">
                     <span>ADMIT ONE</span>
@@ -40,7 +38,7 @@
                     <span>2024</span>
                 </p>
                 <div class="show-name">
-                    <h1 id="movTitle">Salaar</h1>
+                    <h1 id="movTitle"><%=Session["title"]%></h1>
                     <h2>Actor Name</h2>
                 </div>
                 <div class="time">
@@ -61,7 +59,7 @@
             </p>
             <div class="right-info-container">
                 <div class="show-name">
-                    <h1>Dunki</h1>
+                    <h1><%=Session["title"]%></h1>
                 </div>
                 <div class="time">
                     <p>4:00 PM <span>TO</span> 7:00 PM</p>
@@ -77,7 +75,6 @@
             </div>
         </div>
         <div>
-
             <button id="printBtn" onclick="window.print()">Print your ticket</button>
         </div>
     </div>

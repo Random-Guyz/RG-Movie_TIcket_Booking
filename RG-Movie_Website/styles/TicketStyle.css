@@ -32,7 +32,6 @@ html {
 .image {
     height: 250px;
     width: 250px;
-    background-image: url("/Images/Posters/salaar_poster.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     opacity: 0.85;

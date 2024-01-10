@@ -10,9 +10,21 @@
                 <li class="nav-item"><a class="nav-link text-light" href="/#MovSection">Movies</a></li>
 
             </ul>
+
             <form runat="server" class="d-flex">
+                <% if (Session["Username"] == null || Session["Username"].ToString() == "")
+                    {
+
+                %>
                 <asp:Button ID="Button1" runat="server" Text="Login" CssClass="btn btn-outline-warning me-4" OnClick="LoginBtn_Click" />
                 <asp:Button ID="Button2" runat="server" Text="Sign Up" CssClass="btn btn-outline-warning me-4" OnClick="SignInBtn_Click" />
+
+                <%}
+                    else
+                    {
+                %>
+                <asp:Button ID="Button3" runat="server" Text="Log Out" CssClass="btn btn-outline-warning me-4" OnClick="LogOut_Click" />
+                <%  } %>
             </form>
         </div>
     </div>

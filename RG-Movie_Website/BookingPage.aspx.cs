@@ -15,36 +15,60 @@ namespace RG_Movie_Website
 {
     public partial class BookingPage : System.Web.UI.Page
     {
-        public string MovTitle { get; set; }
-        public string MovGenre { get; set; }
-        public string MovImgSrc { get; set; }
+        public string MovTitle
+        {
+            get { return Session["movTitle"] as string; }
+            set { Session["movTitle"] = value; }
+        }
+        public string MovGenre {
+            get { return Session["movGenre"] as string; }
+            set { Session["movGenre"] = value; }
+        }
+        public string MovImgSrc
+        {
+            get { return Session["movImg"] as string; }
+            set { Session["movImg"] = value; }
+        }
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                MovTitle = Request.QueryString["title"];
-                MovGenre = Request.QueryString["genre"];
-                MovImgSrc = Request.QueryString["img"];
-            }
+            //if (!IsPostBack)
+            //{
+            //    MovTitle = Request.QueryString["title"];
+            //    MovGenre = Request.QueryString["genre"];
+            //    MovImgSrc = Request.QueryString["img"];
 
-            HtmlButton payBtn = FindControl("pay") as HtmlButton;
-
-            if (payBtn != null)
-            {
-                payBtn.ServerClick += PayBtn_Click;
-            }
+            //    Session["title"] = MovTitle;
+            //    Session["MovImgSrc"] = MovImgSrc;
+            //}
 
         }
-
-        protected void PayBtn_Click(object sender, EventArgs e)
+        private void SendMessage(string email, string title)
         {
-            string url = ResolveUrl("~/TicketPage.aspx");
-            url += "?title=" + HttpUtility.UrlEncode(MovTitle);
-            url += "&genre=" + HttpUtility.UrlEncode(MovGenre);
-            url += "&img=" + HttpUtility.UrlEncode(MovImgSrc);
+            try
+            {
+                MailMessage mail = new MailMessage();
+                mail.From = new MailAddress("team.randomguyz@gmail.com");
+                mail.To.Add(email);
+                mail.Subject = "Your Query Have Been Submited";
+                mail.IsBodyHtml = true;
+                mail.Body = $"Ticket for {title} is booked successfully!";
 
-            Response.Redirect(url);
+                SmtpClient smtp = new SmtpClient();
+                smtp.Host = "smtp.gmail.com";
+                smtp.Port = 587;
+                smtp.UseDefaultCredentials = false;
+                smtp.Credentials = new NetworkCredential("team.randomguyz@gmail.com", "fnzy whhp bdpc khfa");
+                smtp.EnableSsl = true;
+
+                smtp.Send(mail);
+
+                Response.Write("<script>alert('Email Sent Successful')</script>");
+            }
+            catch (Exception ex)
+            {
+                Response.Write($"<script>alert('Error: {ex.Message}')</script>");
+            }
         }
     }
 }

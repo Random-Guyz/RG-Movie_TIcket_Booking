@@ -134,6 +134,7 @@
     <Content Include="forget_password.aspx" />
     <Content Include="Global.asax" />
     <Content Include="HomePage.aspx" />
+    <Content Include="Images\BG.jpeg" />
     <Content Include="Images\F.jpg" />
     <Content Include="Images\favicon-logo.png" />
     <Content Include="FF.jpg" />
@@ -151,13 +152,20 @@
     <Content Include="Images\Posters\12_fail_poster.jpg" />
     <Content Include="Images\Posters\animal_poster.jpeg" />
     <Content Include="Images\Posters\aquaman_poster.jpg" />
+    <Content Include="Images\Posters\avatar2.jpg" />
+    <Content Include="Images\Posters\dunki.jpg" />
     <Content Include="Images\Posters\dunki_poster.jpg" />
+    <Content Include="Images\Posters\JAWAN.jpg" />
+    <Content Include="Images\Posters\load.jpg" />
+    <Content Include="Images\Posters\madmax.jpg" />
+    <Content Include="Images\Posters\marry.jpg" />
     <Content Include="Images\Posters\migration_poster.jpeg" />
     <Content Include="Images\Posters\salaar_poster.jpg" />
     <Content Include="Images\Posters\sam_bahadur_poster.jpg" />
     <Content Include="Images\Posters\wonka_poster.jpg" />
     <Content Include="Images\user.svg" />
     <Content Include="Images\white_logo.svg" />
+    <Content Include="INSERT_MOVIEINFO.aspx" />
     <Content Include="LoginPage.aspx" />
     <Content Include="MovieElement.ascx" />
     <Content Include="MovieSection.ascx" />
@@ -201,6 +209,13 @@
     </Compile>
     <Compile Include="HomePage.aspx.designer.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="INSERT_MOVIEINFO.aspx.cs">
+      <DependentUpon>INSERT_MOVIEINFO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="INSERT_MOVIEINFO.aspx.designer.cs">
+      <DependentUpon>INSERT_MOVIEINFO.aspx</DependentUpon>
     </Compile>
     <Compile Include="LoginPage.aspx.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>

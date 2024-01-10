@@ -38,7 +38,7 @@ namespace RG_Movie_Website
             string uname = "";
 
             string ErrorMsg = "";
-            using (SqlConnection conn = new SqlConnection("Server=localhost\\SQLEXPRESS;Database=Users;Trusted_Connection=True;"))
+            using (SqlConnection conn = new SqlConnection("Server=localhost\\SQLEXPRESS;Database=Users;Trusted_Connection=True"))
             {
                 try
                 {
@@ -63,9 +63,11 @@ namespace RG_Movie_Website
 
 
                 // Authentication successful
+                Session["Username"] = storedusername; // Store the username in a session variable
                 Response.Write("Login successful");
                 Response.Redirect("HomePage.aspx");
                 return;
+
 
             }
 

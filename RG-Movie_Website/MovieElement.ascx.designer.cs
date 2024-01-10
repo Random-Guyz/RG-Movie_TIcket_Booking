@@ -15,12 +15,30 @@ namespace RG_Movie_Website
     {
 
         /// <summary>
-        /// btn control.
+        /// MovCardImg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor btn;
+        protected global::System.Web.UI.HtmlControls.HtmlImage MovCardImg;
+
+        /// <summary>
+        /// MovieName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl MovieName;
+
+        /// <summary>
+        /// MovieGenreParagraph control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl MovieGenreParagraph;
     }
 }

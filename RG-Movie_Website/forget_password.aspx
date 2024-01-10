@@ -1,9 +1,8 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="forget_password.aspx.cs" Inherits="RG_Movie_Website.forget_password" %>
-
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<head >
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Forgot Password</title>
@@ -31,7 +30,7 @@
             </div>
 
             <div class="control block-cube block-input">
-                <input name="username" type="text" placeholder="Enter Your UserName" />
+                <input name="username" type="text" placeholder="Enter Your UserName"    />
                 <div class="bg-top">
                     <div class="bg-inner"></div>
                 </div>
@@ -44,7 +43,7 @@
             </div>
 
             <div class="control block-cube block-input">
-                <input name="newpass" type="number" placeholder="Enter New Password" />
+                <input name="newpass" type="number" placeholder="Enter New Password"    />
                 <div class="bg-top">
                     <div class="bg-inner"></div>
                 </div>
@@ -56,8 +55,8 @@
                 </div>
             </div>
 
-            <asp:Button class="button-54" role="button" ID="resetBtn" runat="server" Text="SUBMIT" OnClick="resetBtn_Click" />
-
+        <asp:Button  class="button-54" role="button" id="resetBtn" runat="server" Text="SUBMIT" OnClick="resetBtn_Click" />
+            
 
             <div class="signup">
                 <a href="LoginPage.aspx">Back to Login</a>
@@ -66,7 +65,7 @@
         </form>
 
     </div>
-    <%-- <script type="text/javascript">
+   <%-- <script type="text/javascript">
         // Forgot Password Page Script
         let mob = document.querySelector("input[type=number]");
         let resetBtn = document.getElementById('resetBtn');

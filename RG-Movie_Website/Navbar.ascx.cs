@@ -22,5 +22,13 @@ namespace RG_Movie_Website
         {
             Response.Redirect("~/sign_up.aspx");
         }
+
+        protected void LogOut_Click(object sender, EventArgs e)
+        {
+            Response.Write("<script>alert('User Logged Out')</script>");
+            Session["Username"] = "";
+            Session.Abandon();
+            Response.Redirect("~/");
+        }
     }
 }
