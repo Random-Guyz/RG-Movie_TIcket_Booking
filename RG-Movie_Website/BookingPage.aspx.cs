@@ -32,43 +32,7 @@ namespace RG_Movie_Website
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (!IsPostBack)
-            //{
-            //    MovTitle = Request.QueryString["title"];
-            //    MovGenre = Request.QueryString["genre"];
-            //    MovImgSrc = Request.QueryString["img"];
 
-            //    Session["title"] = MovTitle;
-            //    Session["MovImgSrc"] = MovImgSrc;
-            //}
-
-        }
-        private void SendMessage(string email, string title)
-        {
-            try
-            {
-                MailMessage mail = new MailMessage();
-                mail.From = new MailAddress("team.randomguyz@gmail.com");
-                mail.To.Add(email);
-                mail.Subject = "Your Query Have Been Submited";
-                mail.IsBodyHtml = true;
-                mail.Body = $"Ticket for {title} is booked successfully!";
-
-                SmtpClient smtp = new SmtpClient();
-                smtp.Host = "smtp.gmail.com";
-                smtp.Port = 587;
-                smtp.UseDefaultCredentials = false;
-                smtp.Credentials = new NetworkCredential("team.randomguyz@gmail.com", "fnzy whhp bdpc khfa");
-                smtp.EnableSsl = true;
-
-                smtp.Send(mail);
-
-                Response.Write("<script>alert('Email Sent Successful')</script>");
-            }
-            catch (Exception ex)
-            {
-                Response.Write($"<script>alert('Error: {ex.Message}')</script>");
-            }
         }
     }
 }

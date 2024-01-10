@@ -17,7 +17,6 @@ namespace RG_Movie_Website
 
         }
 
-
         protected void Login_Click(object sender, EventArgs e)
         {
             string username = Request.Form["username"];

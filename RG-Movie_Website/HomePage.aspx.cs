@@ -15,9 +15,9 @@ namespace RG_Movie_Website
         {
             if (!IsPostBack)
             {
-            string email = Request.Form["userEmail"];
-            string msg = Request.Form["userMsg"];
-            SendMessage(email, msg);
+                string email = Request.Form["userEmail"];
+                string msg = Request.Form["userMsg"];
+                SendMessage(email, msg);
             }
         }
         private void SendMessage(string email, string msg)
@@ -25,7 +25,7 @@ namespace RG_Movie_Website
             try
             {
                 MailMessage mail = new MailMessage();
-                mail.From = new MailAddress("team.randomguyz@gmail.com");
+                mail.From = new MailAddress("example@gmail.com");
                 mail.To.Add(email);
                 mail.Subject = "Your Query Have Been Submited";
                 mail.IsBodyHtml = true;
@@ -36,7 +36,7 @@ namespace RG_Movie_Website
                 smtp.Host = "smtp.gmail.com";
                 smtp.Port = 587;
                 smtp.UseDefaultCredentials = false;
-                smtp.Credentials = new NetworkCredential("team.randomguyz@gmail.com", "fnzy whhp bdpc khfa");
+                smtp.Credentials = new NetworkCredential("example@gmail.com", "App Password here");
                 smtp.EnableSsl = true;
 
                 smtp.Send(mail);

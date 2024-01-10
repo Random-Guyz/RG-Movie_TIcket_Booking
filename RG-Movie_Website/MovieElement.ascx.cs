@@ -10,20 +10,8 @@ namespace RG_Movie_Website
 {
     public partial class MovieElement1 : System.Web.UI.UserControl
     {
-        //public string MovieTitle { get; set; }
-        //public string MovieGenre { get; set; }
-        //public string MovieImg { get; set; }
-        //public string RedirectURL { get; set; }
         protected void Page_Load(object sender, EventArgs e)
-        {
-            //HtmlAnchor hrefBtn = FindControl("btn") as HtmlAnchor;
-
-            //string url = ResolveUrl("~/BookingPage.aspx");
-            //url += "?title=" + HttpUtility.UrlEncode(MovieTitle);
-            //url += "&genre=" + HttpUtility.UrlEncode(MovieGenre);
-            //url += "&img=" + HttpUtility.UrlEncode(MovieImg);
-            //hrefBtn.HRef = url;
-        }
+        { }
 
         public string MovieImg
         {
@@ -57,9 +45,6 @@ namespace RG_Movie_Website
         }
 
         protected void btn_Click(object sender, EventArgs e)
-        {
-            // Your button click logic here
-            // This method will be called when the button is clicked
-        }
+        {}
     }
 }
