@@ -10,9 +10,9 @@
 ## Footer
 ![Screenshot (17)](https://github.com/Random-Guyz/RG-Movie_TIcket_Booking/assets/106680482/1f91e68c-a43d-4abd-9bc7-77e0d65aa0e1)
 
-##Team
+## Team
 
 - Kaif: Lead & Frontend
 - Haider: Backend, Login & Signup 
-- Ashish: Footer
+- Ashish: Footer & Terms and Conditions Page
 
