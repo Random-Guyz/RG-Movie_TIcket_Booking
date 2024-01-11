@@ -12,7 +12,7 @@
 
 ##Team
 
-- Kaif: Frontend
-- Haider: Backend
-- Moin: Lead
+- Kaif: Lead & Frontend
+- Haider: Backend, Login & Signup 
+- Ashish: Footer
 
